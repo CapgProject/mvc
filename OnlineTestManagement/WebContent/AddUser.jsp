@@ -28,8 +28,8 @@ Add User
 			</tr>
 
 			<tr>
-				<td><input type="submit" value="Add User" />
-				<td><input type="reset" value="Clear">
+				<td><input type="submit" value="Add User" /></td>
+				<td><input type="reset" value="Clear"></td>
 			</tr>
 
 
