@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>To Add Question</title>
+</head>
+<body>
+	Add Question
+	<table>
+		<fo:form action="addquestionsubmit" method="POST"
+			modelAttribute="question">
+
+			<tr>
+				<td>Question Id :</td>
+				<td><fo:input path="questionId" /></td>
+			</tr>
+
+			<tr>
+				<td>Question Title :</td>
+				<td><fo:input path="questionTitle" /></td>
+			</tr>
+
+			<tr>
+				<td>Question Marks :</td>
+				<td><fo:input path="questionMarks" /></td>
+			</tr>
+
+			<tr>
+				<td>Question Options :</td>
+				<td><fo:input path="questionOptions" /></td>
+			</tr>
+
+
+			<tr>
+				<td>Question Chosen Answer:</td>
+				<td><fo:input path="chosenAnswer" /></td>
+			</tr>
+
+
+			<tr>
+				<td>Marks Scored :</td>
+				<td><fo:input path="marksScored" /></td>
+			</tr>
+
+			<tr>
+				<td><input type="submit" value="Add Question" />
+				<td><input type="reset" value="Clear">
+			</tr>
+		</fo:form>
+	</table>
+
+</body>
+</html>

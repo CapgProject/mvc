@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>To show User</title>
+</head>
+<body>
+
+	<table>
+		<tr>
+			<th>User Id</th>
+			<th>User Name</th>
+			<th>User Password</th>
+		</tr>
+		<a:forEach var="user" items="${userdata}">
+			<tr>
+				<td>${user.userId }</td>
+				<td>${user.userName }</td>
+				<td>${user.userPassword}</td>
+
+			</tr>
+		</a:forEach>
+	</table>
+
+
+</body>
+</html>
