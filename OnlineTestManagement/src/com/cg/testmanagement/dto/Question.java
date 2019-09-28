@@ -10,26 +10,42 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "question")
 public class Question {
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		@NotNull(message = "Question Id cannot be empty!")
 		@Column(name = "question_id")
 		private Long questionId;
+		
+		@NotEmpty(message = "Question options cannot be empty!")
 		@Column(name = "question_options")
 		private String[] questionOptions;
-		@Column(name = "question_title")
+		
+		@NotEmpty(message = "Question Title cannot be empty!")
+		@Column(name = "question_title")		
 		private String questionTitle;
+		
+		@NotNull(message = "Question Answer cannot be empty!")
 		@Column(name = "question_correct_answer")
 		private Integer questionAnswer;
+		
+		@NotNull(message = "Question Marks cannot be empty!")
 		@Column(name = "question_marks")
 		private Double questionMarks;
+		
+		@NotNull(message = "Correct Answer cannot be empty!")
 		@Column(name = "question_chosen_answer")
 		private Integer chosenAnswer;
+		
 		@Column(name = "question_marks_scored")
 		private Double marksScored;
+		
 		@Column(name = "is_deleted")
 		private Boolean isDeleted;
 

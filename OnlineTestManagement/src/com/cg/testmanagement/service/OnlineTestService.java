@@ -1,7 +1,5 @@
 package com.cg.testmanagement.service;
 
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.List;
 
 import com.cg.testmanagement.dto.OnlineTest;
@@ -27,15 +25,6 @@ public interface OnlineTestService {
 	public User searchUser(Long userId) throws UserException;
 	public List<User> getUsers();
 	public List<OnlineTest> getTests();
-	public void validateUserId(Long id) throws UserException;
-	public void validateTestId(Long id) throws UserException;
-	public void validateQuestionId(Long id) throws UserException;
-	public void validateUserName(String name) throws UserException;
-	public void validatePassword(String password) throws UserException;
-	public void validateDate(LocalDateTime startDate, LocalDateTime endDate) throws UserException;
-	public void validateTestDuration(LocalTime duration, LocalDateTime startDate, LocalDateTime endDate) throws UserException;
-	public void validateEndTime(LocalDateTime endDate) throws UserException;
-	public void questionAnswerValidate(Integer questionAnswer) throws UserException;
 	public User updateProfile(User user) throws UserException;
 
 }

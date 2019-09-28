@@ -34,12 +34,12 @@
 	
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
           <property name="dataSource" ref="dataSource"/>
-          <property name="packagesToScan" value="com.cg.springmvcdemo.dto"/>
+          <property name="packagesToScan" value="com.cg.testmanagement.dto"/>
           <property name="persistenceProviderClass" value="org.hibernate.jpa.HibernatePersistenceProvider"/>
           <property name="jpaPropertyMap">
               <map>
                   <entry key="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
-                  <entry key="hibernate.hbm2ddl.auto" value="update"/>
+                  <entry key="hibernate.hbm2ddl.auto" value="create"/>
                
               </map>
               
