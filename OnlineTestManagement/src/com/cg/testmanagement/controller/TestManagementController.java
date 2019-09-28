@@ -18,7 +18,7 @@ import com.cg.testmanagement.exception.UserException;
 import com.cg.testmanagement.service.OnlineTestService;
 
 @Controller
-public class TestManagementController {
+public class TestManagementController{
 
 	@Autowired
 	OnlineTestService testservice;
