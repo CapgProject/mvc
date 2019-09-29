@@ -10,12 +10,12 @@
 <body>
 Add User
 	<table>
-		<fo:form action="addusersubmit" method="POST" modelAttribute="user">
+		<fo:form action="addusersubmit" method="post" modelAttribute="user">
 
-			<tr>
+			<%-- <tr>
 				<td>User Id :</td>
 				<td><fo:input path="userId" /></td>
-			</tr>
+			</tr>  --%>
 
 			<tr>
 				<td>User Name:</td>
@@ -28,8 +28,8 @@ Add User
 			</tr>
 
 			<tr>
-				<td><input type="submit" value="Add User" /></td>
-				<td><input type="reset" value="Clear"></td>
+				<td><input type="submit" value="Add User" />
+				<td><input type="reset" value="Clear">
 			</tr>
 
 

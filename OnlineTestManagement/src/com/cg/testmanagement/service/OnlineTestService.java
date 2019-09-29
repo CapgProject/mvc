@@ -18,6 +18,7 @@ public interface OnlineTestService {
 	public User registerUser(User user) throws UserException;
 	public Boolean answerQuestion(OnlineTest onlineTest, Question question, Integer chosenAnswer) throws UserException;
 	public Question showQuestion(OnlineTest onlineTest, Long questionId) throws UserException;
+	public Question searchQuestion(Long questionId) throws UserException;
 	public Boolean assignTest(Long userId, Long testId) throws UserException;
 	public Double getResult(OnlineTest onlineTest) throws UserException;
 	public Double calculateTotalMarks(OnlineTest onlineTest) throws UserException;

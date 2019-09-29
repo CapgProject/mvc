@@ -19,7 +19,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class Question {
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		@NotNull(message = "Question Id cannot be empty!")
 		@Column(name = "question_id")
 		private Long questionId;
 		
@@ -151,17 +150,75 @@ public class Question {
 
 		@Override
 		public int hashCode() {
-			return this.questionId.intValue();
+			final int prime = 31;
+			int result = 1;
+			result = prime * result + ((chosenAnswer == null) ? 0 : chosenAnswer.hashCode());
+			result = prime * result + ((isDeleted == null) ? 0 : isDeleted.hashCode());
+			result = prime * result + ((marksScored == null) ? 0 : marksScored.hashCode());
+			result = prime * result + ((onlinetest == null) ? 0 : onlinetest.hashCode());
+			result = prime * result + ((questionAnswer == null) ? 0 : questionAnswer.hashCode());
+			result = prime * result + ((questionId == null) ? 0 : questionId.hashCode());
+			result = prime * result + ((questionMarks == null) ? 0 : questionMarks.hashCode());
+			result = prime * result + Arrays.hashCode(questionOptions);
+			result = prime * result + ((questionTitle == null) ? 0 : questionTitle.hashCode());
+			return result;
 		}
 
 		@Override
 		public boolean equals(Object obj) {
-			if (obj != null) {
-				return this.hashCode() == obj.hashCode();
-			} else {
+			if (this == obj)
+				return true;
+			if (obj == null)
 				return false;
-			}
+			if (getClass() != obj.getClass())
+				return false;
+			Question other = (Question) obj;
+			if (chosenAnswer == null) {
+				if (other.chosenAnswer != null)
+					return false;
+			} else if (!chosenAnswer.equals(other.chosenAnswer))
+				return false;
+			if (isDeleted == null) {
+				if (other.isDeleted != null)
+					return false;
+			} else if (!isDeleted.equals(other.isDeleted))
+				return false;
+			if (marksScored == null) {
+				if (other.marksScored != null)
+					return false;
+			} else if (!marksScored.equals(other.marksScored))
+				return false;
+			if (onlinetest == null) {
+				if (other.onlinetest != null)
+					return false;
+			} else if (!onlinetest.equals(other.onlinetest))
+				return false;
+			if (questionAnswer == null) {
+				if (other.questionAnswer != null)
+					return false;
+			} else if (!questionAnswer.equals(other.questionAnswer))
+				return false;
+			if (questionId == null) {
+				if (other.questionId != null)
+					return false;
+			} else if (!questionId.equals(other.questionId))
+				return false;
+			if (questionMarks == null) {
+				if (other.questionMarks != null)
+					return false;
+			} else if (!questionMarks.equals(other.questionMarks))
+				return false;
+			if (!Arrays.equals(questionOptions, other.questionOptions))
+				return false;
+			if (questionTitle == null) {
+				if (other.questionTitle != null)
+					return false;
+			} else if (!questionTitle.equals(other.questionTitle))
+				return false;
+			return true;
 		}
+
+		
 
 	}
 

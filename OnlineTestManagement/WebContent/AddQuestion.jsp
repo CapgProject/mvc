@@ -14,10 +14,10 @@ Add Question
 			modelAttribute="question">
 
 			<tr>
-				<td>Question Id :</td>
-				<td><fo:input path="questionId" /></td>
+				<td>Test ID: </td>
+				<td><input type="text" name="testid" /></td>
 			</tr>
-
+			
 			<tr>
 				<td>Question Title :</td>
 				<td><fo:input path="questionTitle" /></td>
@@ -35,15 +35,15 @@ Add Question
 
 
 			<tr>
-				<td>Question Chosen Answer:</td>
-				<td><fo:input path="chosenAnswer" /></td>
+				<td>Question Answer:</td>
+				<td><fo:input path="questionAnswer" /></td>
 			</tr>
 
 
-			<tr>
+			<%-- <tr>
 				<td>Marks Scored :</td>
 				<td><fo:input path="marksScored" /></td>
-			</tr>
+			</tr> --%>
 
 			<tr>
 				<td><input type="submit" value="Add Question" />

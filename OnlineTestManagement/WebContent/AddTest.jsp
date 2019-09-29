@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="fo" uri="http://www.springframework.org/tags/form" %>    
+<%-- <%@ taglib prefix="fo" uri="http://www.springframework.org/tags/form" %> --%>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,54 +9,52 @@
 </head>
 <body>
 Add Test
-
+<form action="addtestsubmit" method="post" >
 	<table>
 
-		<fo:form action="addtestsubmit" method="POST" modelAttribute="test">
+		
 
-			<tr>
+			<!-- <tr>
 				<td>Test Id :</td>
-				<td><fo:input path="testId" /></td>
-			</tr>
+				<td><input type="text" name="testId"/></td>
+			</tr> -->
 
 			<tr>
 				<td>Test Name :</td>
-				<td><fo:input path="testName" /></td>
+				<td><input type="text" name="testName"/></td>
 			</tr>
 
 			<tr>
 				<td>Test Duration :</td>
-				<td><fo:input path="testDuration" />
+				<td><input type="text" name="testDuration"/></td>
 			</tr>
 
-			<tr>
+			<!-- <tr>
 				<td>Test Total Marks :</td>
-				<td><fo:input path="testTotalMarks" /></td>
-			</tr>
+				<td><input type="text" name="testTotalMarks"/></td>
+			</tr> -->
 
 			<tr>
 				<td>Test Start Time :</td>
-				<td><fo:input path="startTime" /></td>
+				<td><input type="text" name="startTime"/></td>
 			</tr>
 
 			<tr>
 				<td>Test End Time :</td>
-				<td><fo:input path="endTime" /></td>
+				<td><input type="text" name="endTime"/></td>
 			</tr>
 			<tr>
 				<td>Test Marks Scored :</td>
-				<td><fo:input path="testMarksScored" /></td>
+				<td><input type="text" name="marksScored"/></td>
 			</tr>
 			<tr>
-				<td><input type="submit" value="Add Product" />
+				<td><input type="submit" value="Add Test" />
 				<td><input type="reset" value="Clear">
 			</tr>
 
-		</fo:form>
+		
 
 	</table>
-	<table>
-
-	</table>
+	</form>
 </body>
 </html>

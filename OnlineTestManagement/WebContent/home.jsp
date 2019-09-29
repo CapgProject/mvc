@@ -7,20 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="addtest">Add Test</a>
-	<a href="showtest">Show Test</a>
-	<a href="removetest">Remove Test</a>
-	<a href="updatetest">Update Test</a>
-	<a href="addQuestion">Add Question</a>
-	<a href="showquestion">Show Question</a>
-	<a href="removequestion">Remove Question</a>
-	<a href="updatequestion">Update Question</a>
-	<a href="adduser">Add User</a>
-	<a href="showuser">show User</a>
-	<a href="removeuser">Remove User</a>
-	<a href="updateuser">Update User</a>
-	<a href="showallusers">Show all Users</a>
-	<a href="showalltests">Show All Tests</a>
-	
+	<a href="addtest">Add Test</a><br/>
+	<a href="removetest">Remove Test</a><br/>
+	<a href="updatetest">Update Test</a><br/>
+	<a href="addQuestion">Add Question</a><br/>
+	<a href="removequestion">Remove Question</a><br/>
+	<a href="updatequestion">Update Question</a><br/>
+	<a href="adduser">Add User</a><br/>
+	<a href="updateuser">Update User</a><br/>
+	<a href="showallusers">Show all Users</a><br/>
+	<a href="showalltests">Show All Tests</a><br/>
+	<a href="givetest">Give Test</a><br/>
+	<a href="assigntest">Assign Test</a><br/>
+	<a href="getresult">Get Result</a><br/>
 </body>
 </html>

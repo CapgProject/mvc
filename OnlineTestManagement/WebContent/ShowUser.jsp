@@ -12,14 +12,11 @@
 		<tr>
 			<th>User Id</th>
 			<th>User Name</th>
-			<th>User Password</th>
 		</tr>
 		<a:forEach var="user" items="${userdata}">
 			<tr>
-				<td>${user.userId }</td>
-				<td>${user.userName }</td>
-				<td>${user.userPassword}</td>
-
+				<td>${user.userId}</td>
+				<td>${user.userName}</td>
 			</tr>
 		</a:forEach>
 	</table>

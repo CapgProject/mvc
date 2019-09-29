@@ -8,6 +8,7 @@ public class ExceptionMessage {
 	public static final String ENDTIMEMESSAGE = "End date cannot be in the past";
 	public static final String DURATIONMESSAGE = "The test duration cannot be more than the time between the start and end time";
 	public static final String QUESTIONMESSAGE = "The question does not exist in the OnlineTest";
+	public static final String QUESTIONNOTFOUNDMESSAGE = "The question does not exist";
 	public static final String USERMESSAGE = "The user does not exist";
 	public static final String TESTMESSAGE = "The test does not exist or is already assigned";
 	public static final String INVALIDQUESTIONANSWER = "The Question Answer can only be in the range of 0 to 3";

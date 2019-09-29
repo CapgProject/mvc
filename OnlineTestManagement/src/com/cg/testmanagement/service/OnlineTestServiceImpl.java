@@ -24,9 +24,9 @@ public class OnlineTestServiceImpl implements OnlineTestService{
 	
 	@Override
 	public User registerUser(User user) throws UserException {
-		User returnedUser;
-		if ((returnedUser = testdao.saveUser(user)) != null)
-			return returnedUser;
+		User returnedUser = testdao.saveUser(user);
+		if (returnedUser != null)
+			return user;
 		else {
 			throw new UserException(ExceptionMessage.DATABASEMESSAGE);
 		}
@@ -224,5 +224,16 @@ public class OnlineTestServiceImpl implements OnlineTestService{
 	@Override
 	public List<OnlineTest> getTests() {
 		return testdao.getTests();
+	}
+
+	@Override
+	public Question searchQuestion(Long questionId) throws UserException {
+		Question question = testdao.searchQuestion(questionId);
+		if(question != null) {
+			return question;
+		}
+		else {
+			throw new UserException(ExceptionMessage.QUESTIONNOTFOUNDMESSAGE);
+		}
 	}
 }

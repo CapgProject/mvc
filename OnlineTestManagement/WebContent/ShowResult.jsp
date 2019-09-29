@@ -7,9 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="removetestsubmit" method="POST">
-		Test Id : <input type="text" name="testid" />
-			<input type="submit" value="Delete Test" />
-</form>
+<table>
+<tr>
+<td>Total Marks Scored are :</td>
+<td>${result}</td>
+</tr>
+</table>
 </body>
 </html>

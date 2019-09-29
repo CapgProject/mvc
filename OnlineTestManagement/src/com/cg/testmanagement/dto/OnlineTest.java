@@ -24,14 +24,12 @@ public class OnlineTest {
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		@Column(name = "test_id")
-		@NotNull(message = "Test Id cannot be empty!")
 		private Long testId;
 		
 		@NotEmpty(message = "Test Name cannot be empty!")
 		@Column(name = "test_name")
 		private String testName;
 		
-		@NotEmpty(message = "Test Duration cannot be empty!")
 		@Column(name = "test_duration")
 		private LocalTime testDuration;
 		
@@ -45,11 +43,9 @@ public class OnlineTest {
 		@Column(name = "test_marks_scored")
 		private Double testMarksScored;
 		
-		@NotEmpty(message = "Test start time cannot be empty!")
 		@Column(name = "test_start_time")
 		private LocalDateTime startTime;
 		
-		@NotEmpty(message = "Test end time cannot be empty!")
 		@Column(name = "test_end_time")
 		private LocalDateTime endTime;
 		
@@ -166,6 +162,8 @@ public class OnlineTest {
 					+ isTestAssigned + "]";
 		}
 
+		
+
 		@Override
 		public int hashCode() {
 			return this.testId.intValue();
@@ -173,9 +171,8 @@ public class OnlineTest {
 
 		@Override
 		public boolean equals(Object obj) {
-			if(obj != null)
-			{
-				return this.hashCode() == obj.hashCode();
+			if(this.hashCode() == obj.hashCode()) {
+				return true;
 			}
 			else {
 				return false;

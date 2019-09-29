@@ -13,24 +13,16 @@
 			<th>Test Id</th>
 			<th>Test Name</th>
 			<th>Test Duration</th>
-			<th>Test Questions</th>
-			<th>Test Total Marks</th>
 			<th>Test Start Time</th>
 			<th>Test End Time</th>
-			<th>Test Marks Scored</th>
-			
 		</tr>
 		<a:forEach var="test" items="${testdata}">
 			<tr>
-				<td>${test.testId }</td>
-				<td>${test.testName }</td>
-				<td>${test.testDuration }</td>
-				<td>${test.testQuestions }</td>
-				<td>${test.testTotalMarks }</td>
-				<td>${test.startTime }</td>
-				<td>${test.endTime }</td>
-				<td>${test.testMarksScored }</td>
-				
+				<td>${test.testId}</td>
+				<td>${test.testName}</td>
+				<td>${test.testDuration}</td>
+				<td>${test.startTime}</td>
+				<td>${test.endTime}</td>
 			</tr>
 		</a:forEach>
 	</table>

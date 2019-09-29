@@ -47,7 +47,7 @@ public class OnlineTestDaoImpl implements OnlineTestDao {
 	@Override
 	public OnlineTest searchTest(Long testId) throws UserException {
 		OnlineTest test = entitymanager.find(OnlineTest.class, testId);
-		if(test != null && test.getIsdeleted() == null) {
+		if(test != null && test.getIsdeleted() == false) {
 			return test;
 		}
 		else {
@@ -195,14 +195,14 @@ public class OnlineTestDaoImpl implements OnlineTestDao {
 
 	@Override
 	public List<User> getUsers() {
-		Query query = entitymanager.createQuery("FROM User WHERE isAdmin=0 AND isDeleted IS NULL");
+		Query query = entitymanager.createQuery("FROM User WHERE isAdmin IS false AND isDeleted IS false");
 		List<User> userList = query.getResultList();
 		return userList;
 	}
 
 	@Override
 	public List<OnlineTest> getTests() {
-		Query query = entitymanager.createQuery("FROM OnlineTest WHERE isDeleted IS NULL AND isTestAssigned IS NULL");
+		Query query = entitymanager.createQuery("FROM OnlineTest WHERE isDeleted IS false AND isTestAssigned IS false");
 		List<OnlineTest> testList = query.getResultList();
 		return testList;
 	}
